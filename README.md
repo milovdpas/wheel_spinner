@@ -39,6 +39,16 @@ reloads and are matched case-insensitively, so `eric` and `Eric` are the same pe
 cheat settings (bans and forced winner) without opening the panel — no visual feedback,
 no trace.
 
+## Install as an app (Android)
+
+The app ships a web manifest and launcher icons, so Chrome on Android can install it as a
+standalone app: open the site (must be served over **HTTPS**, e.g. deployed on Vercel) →
+Chrome menu (⋮) → **Add to Home screen** → **Install**. It launches full-screen with the
+wheel icon, no browser UI.
+
+Icons live in `public/icons/` and `app/apple-icon.png`; regenerate them with
+`node scripts/generate-icons.mjs` (no image dependencies needed).
+
 ## Tech
 
 - Next.js (App Router) + TypeScript + Tailwind CSS v4
